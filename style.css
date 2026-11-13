@@ -1,0 +1,202 @@
+/* Le Fournil de Léa : feuille de style corrigée (jour 3) */
+
+/* Les variables : on change une couleur ici, elle change partout */
+:root {
+  --couleur-principale: #8a4b1f;
+  --couleur-fond: #fbf3e4;
+  --couleur-texte: #2b2118;
+  --espace: 1.5rem;
+}
+
+/* Remise à zéro de quelques réglages du navigateur */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, sans-serif;
+  line-height: 1.5;
+  color: var(--couleur-texte);
+  background-color: #ffffff;
+}
+
+/* Le menu : le logo à gauche, les liens à droite */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem var(--espace);
+  background-color: var(--couleur-principale);
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+nav ul {
+  display: flex;
+  gap: var(--espace);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
+}
+
+/* L'en-tête */
+header {
+  padding: 4rem var(--espace);
+  text-align: center;
+  background-color: var(--couleur-fond);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: var(--couleur-principale);
+}
+
+/* Les sections : centrées, pas trop larges */
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem var(--espace);
+}
+
+h2 {
+  color: var(--couleur-principale);
+}
+
+/* Les produits : côte à côte, ils passent à la ligne quand la place manque */
+.produits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espace);
+}
+
+.produit {
+  flex: 1 1 220px;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--couleur-fond);
+}
+
+.produit img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.produit h3 {
+  margin-bottom: 0.25rem;
+}
+
+.prix {
+  font-weight: bold;
+  color: var(--couleur-principale);
+}
+
+/* Le tableau des horaires */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 500px;
+}
+
+th,
+td {
+  padding: 0.5rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #d9c7a8;
+}
+
+/* Le formulaire : une colonne, des champs bien visibles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 500px;
+}
+
+input,
+textarea {
+  padding: 0.75rem;
+  font: inherit;
+  border: 2px solid #b8a27e;
+  border-radius: 6px;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+button {
+  align-self: flex-start;
+  min-height: 44px;
+  padding: 0 1.5rem;
+  font: inherit;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: var(--couleur-principale);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Le pied de page */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem var(--espace);
+  color: #ffffff;
+  background-color: var(--couleur-texte);
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+/* Sur téléphone : en dessous de 700 px de large */
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1.25rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  button {
+    align-self: stretch;
+  }
+}
