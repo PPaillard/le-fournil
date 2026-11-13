@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Fournil de Léa - Boulangerie de quartier</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
   </head>
   <body>
     <nav>
@@ -15,6 +16,7 @@
         <li><a href="#horaires">Nos horaires</a></li>
         <li><a href="#ecrire">Nous écrire</a></li>
       </ul>
+      <p class="panier">Panier : <span id="compteur">0</span></p>
     </nav>
 
     <header id="accueil">
@@ -41,31 +43,36 @@
             <h3>Pain au levain</h3>
             <p>Une croûte épaisse, une mie souple. Il se garde quatre jours.</p>
             <p class="prix">4,20 €</p>
+            <button type="button" class="produit-bouton">Commander</button>
           </article>
           <article class="produit">
             <img src="images/croissant.svg" alt="Croissant doré">
             <h3>Croissant</h3>
             <p>Pur beurre, feuilleté à la main.</p>
             <p class="prix">1,30 €</p>
+            <button type="button" class="produit-bouton">Commander</button>
           </article>
           <article class="produit">
             <img src="images/tarte-aux-pommes.svg" alt="Tarte aux pommes ronde, vue de dessus">
             <h3>Tarte aux pommes</h3>
             <p>Pommes du verger voisin, pâte sablée maison. Pour 6 personnes.</p>
             <p class="prix">18,00 €</p>
+            <button type="button" class="produit-bouton">Commander</button>
           </article>
           <article class="produit">
             <img src="images/cookie.svg" alt="Cookie aux éclats de chocolat">
             <h3>Cookie</h3>
             <p>Gros éclats de chocolat noir, cœur fondant.</p>
             <p class="prix">2,10 €</p>
+            <button type="button" class="produit-bouton">Commander</button>
           </article>
         </div>
       </section>
 
       <section id="horaires">
         <h2>Nos horaires</h2>
-        <table>
+        <button type="button" id="bouton-horaires">Voir les horaires</button>
+        <table id="table-horaires" class="cache">
           <tr>
             <th>Jour</th>
             <th>Horaires</th>
